@@ -1,12 +1,12 @@
-def factorial(n):
-    # Base case: factorial of 0 or 1 is 1
-    if n == 0 or n == 1:
-        return 1
-    else:
-        # Recursive case: n * factorial of (n-1)
-        return n * factorial(n-1)
+# Lambda function with a default argument
+multiply = lambda x, y=2: x * y
 
-# Example usage
-number = 5
-result = factorial(number)
-print(f"The factorial of {number} is {result}")
+print(multiply(4))  # Output: 8 (4 * 2)
+print(multiply(4, 3))  # Output: 12 (4 * 3)
+
+
+# Sorting a list of tuples by the second element
+pairs = [(1, 2), (3, 1), (5, 0)]
+sorted_pairs = sorted(pairs, key=lambda x: x[1])
+
+print(sorted_pairs)  # Output: [(5, 0), (3, 1), (1, 2)]
